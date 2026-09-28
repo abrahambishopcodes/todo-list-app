@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <!-- Link to our styles (how the page looks) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>My Todo List</h1>
+
+    <!-- The form where you type a new todo -->
+    <form id="todo-form">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="What do you need to do?"
+        autocomplete="off"
+      >
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Our todos will be placed inside this list by JavaScript -->
+    <ul id="todo-list"></ul>
+
+    <!-- Shown only when there are no todos -->
+    <p id="empty-message">Nothing to do yet. Add your first todo above!</p>
+  </main>
+
+  <!-- Link to our JavaScript (how the page behaves) -->
+  <script src="script.js"></script>
+</body>
+</html>
