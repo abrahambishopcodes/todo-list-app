@@ -18,16 +18,40 @@
         id="todo-input"
         placeholder="What do you need to do?"
         autocomplete="off"
+        autofocus
       >
+      <!-- Optional due date -->
+      <input type="date" id="due-input" aria-label="Due date (optional)">
       <button type="submit">Add</button>
     </form>
+
+    <!-- Filter buttons: choose which todos to show -->
+    <div class="filters" id="filters">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" data-filter="active">Active</button>
+      <button type="button" data-filter="completed">Completed</button>
+    </div>
 
     <!-- Our todos will be placed inside this list by JavaScript -->
     <ul id="todo-list"></ul>
 
-    <!-- Shown only when there are no todos -->
-    <p id="empty-message">Nothing to do yet. Add your first todo above!</p>
+    <!-- Shown only when there are no todos to show -->
+    <p id="empty-message"></p>
+
+    <!-- Bottom bar: counter + clear completed -->
+    <footer id="footer">
+      <span id="counter"></span>
+      <button type="button" id="clear-completed" class="link-btn">Clear completed</button>
+    </footer>
+
+    <p class="hint">Tip: double-click a todo to edit it.</p>
   </main>
+
+  <!-- The "Undo" bar that pops up after deleting -->
+  <div id="toast" class="toast" hidden>
+    <span id="toast-message"></span>
+    <button type="button" id="undo-btn">Undo</button>
+  </div>
 
   <!-- Link to our JavaScript (how the page behaves) -->
   <script src="script.js"></script>
